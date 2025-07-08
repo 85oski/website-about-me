@@ -1,0 +1,346 @@
+@use 'lib/var';
+@use 'lib/scheme';
+@use 'lib/sanitize.css';
+
+@font-face {
+    font-family: Fira Code;
+    src: url('firacode.ttf');
+}
+
+body {
+    font-family: Fira Code;
+    color: scheme.$on-background;
+    background-color: scheme.$background;
+
+    ::selection {
+        color: scheme.$on-primary;
+        background-color: scheme.$primary;
+    }
+}
+
+button {
+    display: flex;
+    padding: unset;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    fill: scheme.$on-background;
+}
+
+main p.welcome-message {
+    background-color: scheme.$primary;
+    color: scheme.$on-primary;
+    text-align: center;
+    width: fit-content;
+    align-self: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+    &::selection {
+        background-color: scheme.$primary-container;
+        color: scheme.$on-primary-container;
+    }
+}
+@keyframes anim {
+    from {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    $delay: 0.25s;
+
+    @for $i from 1 through 10 {
+        :nth-child(#{$i}) {
+            opacity: 0;
+            animation: anim 0.5s forwards ease-out #{$delay * $i};
+        }
+    }
+
+    padding: 1rem;
+    margin: auto;
+    gap: 2rem;
+    display: flex;
+    max-width: var.$max-width;
+    flex-direction: column;
+
+    .not-found {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        align-items: center;
+        flex-direction: column;
+        p {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: scheme.$error;
+            color: scheme.$on-error;
+            width: fit-content;
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            &::selection {
+                background-color: scheme.$error-container;
+                color: scheme.$on-error-container;
+            }
+        }
+        a {
+            background-color: scheme.$primary;
+            color: scheme.$on-primary;
+            padding: 0.5rem 1rem;
+            border-radius: 0.75rem;
+            svg {
+                fill: scheme.$on-primary;
+            }
+            text-decoration: none;
+            text-align: none;
+            display: flex;
+            width: fit-content;
+        }
+    }
+
+    .welcome-message {
+        text-align: center;
+        width: fit-content;
+        align-self: center;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        color: scheme.$on-primary;
+        background-color: scheme.$primary;
+
+        &::selection {
+        background-color: scheme.$primary-container;
+        color: scheme.$on-primary-container;
+        }
+    }
+
+    .about-me {
+    }
+
+    .card {
+        p {
+            margin: unset;
+        }
+        p:first-of-type {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        display: flex;
+        justify-content: space-evenly;
+        @media screen and (max-width: 420px) {
+            gap: 2rem;
+            align-items: center;
+            flex-direction: column;
+
+            section {
+                width: 100%;
+            }
+        }
+        img {
+            width: 7rem;
+            border: 0.15rem solid scheme.$outline-variant;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        h4 {
+            font-weight: 400;
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+
+    .languages-i-know {
+        ul {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            display: flex;
+            list-style: none;
+            li {
+                color: scheme.$on-primary-container;
+                margin: 1rem;
+                border-radius: 20px;
+
+                border: 2px solid scheme.$outline;
+
+                width: 105px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                flex-direction: column;
+                aspect-ratio: 1/1;
+                svg {
+                    width: 100%;
+                    height: auto;
+                    max-width: 25px;
+                    path {
+                        fill: scheme.$on-primary-container;
+                    }
+                }
+            }
+        }
+    }
+
+    > section {
+        p {
+            text-align: justify;
+        }
+        h3 {
+            margin-top: unset;
+            display: inline-block;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 100%;
+                position: absolute;
+                height: 4px;
+                bottom: -5px;
+                background-color: scheme.$primary;
+                border-radius: 1rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: unset;
+            margin: unset;
+            li a {
+                gap: 0.5rem;
+                padding: 7px 10px;
+                display: flex;
+                align-items: center;
+                color: scheme.$on-background;
+                transition: 0.2s;
+                width: fit-content;
+                border-radius: 10px;
+                text-decoration: none;
+                &:hover {
+                    background-color: scheme.$surface-container-highest;
+                }
+            }
+        }
+        table {
+            tr {
+                display: flex;
+                margin: 0.2rem;
+                th {
+                    word-break: normal;
+                }
+                td {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+header {
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    background-color: scheme.$background;
+
+    @supports(backdrop-filter: var.$blur) {
+        backdrop-filter: var.$blur;
+        background-color: scheme.$background-transparent;
+    }
+
+    nav {
+        &, section {
+            display: flex;
+        }
+
+        section {
+            align-items: center;
+
+            &:first-of-type {
+                margin-left: 0.5rem;
+                gap: 0.25rem;
+            }
+
+            button {
+                background-color: unset;
+                padding: 15px;
+                display: flex;
+                position: relative;
+                border: unset;
+
+                &:hover {
+                    background-color: scheme.$background-transparent-hover;
+                }
+
+                menu {
+                    transform: translateY(-10px);
+                    opacity: 0;
+                    display: none;
+                    flex-direction: column;
+                    border: 1px solid scheme.$outline-variant;
+                    border-radius: 15px;
+                    list-style: none;
+                    align-items: center;
+                    padding: 5px;
+                    margin: 5px;
+                    position: absolute;
+                    right: 0px;
+                    top: 100%;
+                    background-color: scheme.$background;
+                    display: flex;
+                    visibility: hidden;
+                    transition: 0.25s ease-in-out;
+                    
+                    &.active {
+                        transform: none;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    
+                    li {
+                        width: 100%;
+                        a, button {
+                            border-radius: 10px;
+                            font-family: Fira Code;
+                            flex: 1;
+                            transition: 0.1s;
+                            display: flex;
+                            width: max-content;
+                            align-items: center;
+                            justify-content: left;
+                            padding: 7px 15px;
+                            color: scheme.$on-background;
+                            &:hover {
+                                background-color: scheme.$background-transparent-hover;
+                            }
+                        }
+                        a {
+                            width: max-content;
+                            gap: 5px;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        justify-content: space-between;
+        margin: auto;
+        max-width: var.$max-width;
+    }
+}
