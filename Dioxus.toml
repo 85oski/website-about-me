@@ -1,2 +1,5 @@
 [application]
 asset_dir = "assets"
+
+[web.app]
+base_path = "website-about-me"
