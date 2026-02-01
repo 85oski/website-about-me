@@ -1,0 +1,20 @@
+section {
+    h3 {
+        position: relative;
+        display: inline-block;
+        &::before {
+            transition: var(--transition);
+            bottom: -0.4rem;
+            position: absolute;
+            border-radius: 1rem;
+            width: 100%;
+            content: '';
+            height: 0.25rem;
+            background-color: var(--primary);
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
+}

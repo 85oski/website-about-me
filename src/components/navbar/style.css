@@ -1,0 +1,110 @@
+header {
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    background-color: var(--background);
+
+    @supports (backdrop-filter: var(--blur)) {
+        backdrop-filter: var(--blur);
+        background-color: var(--background-transparent);
+    }
+}
+
+header nav {
+    justify-content: space-between;
+    margin: auto;
+    max-width: var(--page-width);
+    padding: var(--page-margin);
+    display: flex;
+}
+
+header nav section {
+    display: flex;
+}
+
+header nav section a {
+    color: var(--on-background);
+    gap: 0.4rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav section > button {
+    border-radius: 0.75rem;
+    transition: var(--transition);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    aspect-ratio: 1/1;
+    position: relative;
+    width: 3.5rem;
+
+    @media(hover: hover) {
+        &:hover {
+            background-color: var(--background-transparent-hover);
+        }
+    }
+
+    &:active {
+        background-color: var(--background-transparent-hover);
+    }
+
+    menu {
+        right: 0;
+        margin: 0;
+        top: 110%;
+        backdrop-filter: var(--blur);
+        padding: 0.25rem 0;
+        width: max-content;
+        flex-direction: column;
+        list-style: none;
+        border-radius: 0.75rem;
+        display: flex;
+        position: absolute;
+        border: 0.1rem solid var(--outline);
+        background-color: var(--background);
+        gap: 0.2rem;
+        padding: 0.25rem;
+
+        opacity: 0;
+                    transform: translateY(-1rem);
+                    visibility: hidden;
+
+        &.active, &.inactive {
+                        transition: 0.3s ease;
+                    }
+                    
+                    &.active {
+                        opacity: 1;
+                        transform: none;
+                        visibility: visible;
+                    }
+                    &.inactive {
+                        opacity: 0;
+                        transform: translateY(-1rem);
+                        visibility: hidden;
+                    }
+
+                    li {
+            button, a {
+                background-color: transparent;
+                text-align: left;
+                border: none;
+                border-radius: 0.5rem;
+                width: 100%;
+                transition: calc(var(--transition) / 2);
+                padding: 0.5rem 1rem;
+                &:hover {
+                    background-color: var(--background-transparent-hover);
+                }
+            }
+
+        }
+
+    }
+}

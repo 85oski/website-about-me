@@ -1,0 +1,27 @@
+p.greeting {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    align-self: center;
+    width: fit-content;
+    border-radius: 1rem;
+    color: var(--on-primary);
+    background-color: var(--primary);
+
+    &::selection {
+        color: var(--on-primary-container);
+        background-color: var(--primary-container);
+    }
+}
+
+section.biography table tr {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+
+    th {
+        word-break: normal;
+    }
+
+    td {
+        margin-left: 1rem;
+    }
+}

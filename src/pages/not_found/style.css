@@ -1,0 +1,68 @@
+.not-found {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+
+  > p {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+
+    svg {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+  }
+
+  aside {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    p, a {
+        background-color: var(--surface-container);
+        transition: var(--transition);
+        border-radius: 1rem;
+        border: 0.15rem solid transparent;
+    }
+
+    p {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        word-break: break-all;
+        padding: 0 1rem;
+        margin: 0;
+        color: var(--on-error);
+        background-color: var(--error);
+        &::selection {
+            background-color: var(--error-container);
+            color: var(--on-error-container);
+        }
+      }
+
+      a {
+        height: fit-content;
+        box-sizing: border-box;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        svg {
+            color: var(--secondary);
+        }
+
+        &:hover {
+          border-color: var(--secondary);
+          color: var(--secondary);
+        }
+      }
+  }
+}

@@ -1,0 +1,28 @@
+[package]
+name = "website-about-me"
+version = "0.1.0"
+authors = ["85oski <oskar.baran.x@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.7.3", features = ["router"] }
+dioxus-free-icons = { version = "0.10.0", features = ["bootstrap", "font-awesome-brands", "lucide"] }
+dioxus-i18n = "0.5.1"
+dioxus-sdk = { version = "0.7.0", features = ["storage", "window"] }
+serde = { version = "1.0.228", features = ["derive"] }
+web-sys = { version = "0.3.85", features = ["Window", "Navigator"] }
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
+
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+debug = false

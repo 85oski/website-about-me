@@ -1,0 +1,5 @@
+[application]
+name = "website-about-me"
+
+[web.app]
+title = "Oskar Baran"
