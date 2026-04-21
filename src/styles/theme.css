@@ -2,7 +2,7 @@
   color-scheme: light dark;
 
   --background: light-dark(#fbf8ff, #121318);
-  --background-transparent: light-dark(#fbf8ff80, #121318c0);
+  --background-transparent: light-dark(#fbf8ffAF, #121318E0);
   --background-transparent-hover: light-dark(#9b8ea79b, #4d51609b);
   --error: light-dark(#ba1a1a, #ffb4ab);
   --error-container: light-dark(#ffdad6, #93000a);
