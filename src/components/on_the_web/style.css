@@ -29,6 +29,7 @@ section.on-the-web ul {
 
         @media(hover: hover) {
             &:hover {
+                border-radius: 0.75rem;
                 border-color: var(--primary);
                 transform: translateY(-0.3rem);
                 color: var(--on-primary-container);
