@@ -7,6 +7,8 @@ pub use route::Route;
 
 use crate::prelude::hooks::{use_init_locale, use_init_theme};
 
+const _: Asset = asset!("/assets/inter.ttf", AssetOptions::builder().with_hash_suffix(false));
+const _: Asset = asset!("/src/styles/base/fonts.css", CssAssetOptions::new().with_static_head(true));
 const _: Asset = asset!("/src/styles/base/animations.css", CssAssetOptions::new().with_static_head(true));
 const _: Asset = asset!("/src/styles/base/variables.css", CssAssetOptions::new().with_static_head(true));
 const _: Asset = asset!("/src/styles/main.css", CssAssetOptions::new().with_static_head(true));
