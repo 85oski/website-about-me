@@ -33,6 +33,7 @@ biography = Bio
     .at-2020 = I started my studies at the Technical School No. 4 in Stalowa Wola, majoring in programmer technician
     .at-2024 = I completed a two-week internship in Malaga, learning ASP.NET technology while working on a project with a final grade of 6, confirmed by a certificate
     .at-2025 = Passing the professional examinations of the INF 03 classification with a result of 93%, confirmed by a certificate of professional qualification
+    .at-2026 = Obtaining a professional qualification certificate in the INF.04 field with an overall score of 95%
 
 on-the-web = On the web
 

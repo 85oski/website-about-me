@@ -32,6 +32,7 @@ biography = Biografia
     .at-2020 = Zacząłem naukę w technikum nr. 4 w Stalowej Woli na profilu technik programista
     .at-2024 = Odbyłem dwutygodniowe praktyki w Maladze, ucząc się przy tym technologii ASP.NET podczas prac nad projektem z końcową oceną 6, potwierdzone certyfikatem
     .at-2025 = Zdanie egzaminów zawodowych klasyfikacji INF 03 z wynikiem 93%, potwierdzone certyfikatem kwalifikacji zawodowej
+    .at-2026 = Uzyskanie certyfikatu kwalifikacji zawodowej w zakresie INF.04 z wynikiem ogólnym 95%.
 
 on-the-web = W sieci
 
