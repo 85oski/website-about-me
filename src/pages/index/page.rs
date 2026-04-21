@@ -67,29 +67,33 @@ pub fn Index() -> Element {
             ],
         }
 
-        Section { title: t!("what-i-love"),
-            p { {t!("what-i-love.content")} }
-        }
-
         Section { title: t!("biography"), class: "biography",
             table {
                 tr {
-                    th { "2006" }
-                    td { {t!("biography.at-2006")} }
+                    th { "2026" }
+                    td { {t!("biography.at-2026")} }
                 }
                 tr {
-                    th { "2020" }
-                    td { {t!("biography.at-2020")} }
+                    th { "2025" }
+                    td { {t!("biography.at-2025")} }
                 }
                 tr {
                     th { "2024" }
                     td { {t!("biography.at-2024")} }
                 }
                 tr {
-                    th { "2025" }
-                    td { {t!("biography.at-2025")} }
+                    th { "2020" }
+                    td { {t!("biography.at-2020")} }
+                }
+                tr {
+                    th { "2006" }
+                    td { {t!("biography.at-2006")} }
                 }
             }
+        }
+
+        Section { title: t!("what-i-love"),
+            p { {t!("what-i-love.content")} }
         }
     }
 }
