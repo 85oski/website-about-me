@@ -13,15 +13,23 @@ p.greeting {
     }
 }
 
+section.biography table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
 section.biography table tr {
-    display: flex;
-    padding: 0.25rem 0.5rem;
 
     th {
-        word-break: normal;
+        text-align: left;
+        vertical-align: top;
+        padding: 0.25rem 0.5rem;
+        white-space: nowrap;
+        font-weight: bold;
     }
 
     td {
-        margin-left: 1rem;
+        padding: 0.25rem 0.5rem 0.25rem 1rem;
+        vertical-align: top;
     }
 }
