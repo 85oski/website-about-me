@@ -1,4 +1,4 @@
-use dioxus_free_icons::{Icon, icons::{fa_brands_icons::{FaFacebook, FaGithub, FaInstagram, FaSpotify, FaTelegram}}};
+use dioxus_free_icons::{Icon, icons::fa_brands_icons::{FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaSpotify, FaTelegram}};
 use dioxus_i18n::t;
 use dioxus::prelude::*;
 
@@ -31,6 +31,12 @@ pub fn Index() -> Element {
                     },
                 ),
                 (
+                    "https://www.linkedin.com/in/oskar-baran/",
+                    rsx! {
+                        Icon { icon: FaLinkedin }
+                    }
+                ),
+                (
                     "https://www.facebook.com/oskar.baran.01",
                     rsx! {
                         Icon { icon : FaFacebook }
@@ -57,21 +63,15 @@ pub fn Index() -> Element {
             ],
         }
 
-        TechStack {
-            title: t!("tech-stack"),
-            items: &[
-                "NextJS", "NuxtJS", "TypeScript",
-                "CSS", "SCSS", "HTML", "Rust",
-                "Dioxus", "Vue", "JavaScript",
-                "SQL",
-            ],
-        }
-
         Section { title: t!("biography"), class: "biography",
             table {
                 tr {
                     th { "2026" }
-                    td { {t!("biography.at-2026")} }
+                    td { {t!("biography.at-04-2026")} }
+                }
+                tr {
+                    th { }
+                    td { {t!("biography.at-03-2026")} }
                 }
                 tr {
                     th { "2025" }
@@ -90,6 +90,16 @@ pub fn Index() -> Element {
                     td { {t!("biography.at-2006")} }
                 }
             }
+        }
+
+        TechStack {
+            title: t!("tech-stack"),
+            items: &[
+                "NextJS", "NuxtJS", "TypeScript",
+                "CSS", "SCSS", "HTML", "Rust",
+                "Dioxus", "Vue", "JavaScript",
+                "SQL",
+            ],
         }
 
         Section { title: t!("what-i-love"),
