@@ -30,11 +30,11 @@ what-i-love = What i love
 
 biography = Bio
     .at-2006 = Born in Stalowa Wola, Poland
-    .at-2020 = I started my studies at the Technical School No. 4 in Stalowa Wola, majoring in programmer technician
-    .at-2024 = I completed a two-week internship in Malaga, learning ASP.NET technology while working on a project with a final grade of 6, confirmed by a certificate
-    .at-2025 = Passing the professional examinations of the INF 03 classification with a result of 93%, confirmed by a certificate of professional qualification
-    .at-2026 = Obtaining a professional qualification certificate in the INF.04 field with an overall score of 95%
-
+    .at-2020 = I started my education at Technical School No. 4 in Stalowa Wola, majoring in IT
+    .at-2024 = I completed a two-week internship in Malaga (ASP.NET), finishing the project with a top grade
+    .at-2025 = I passed the INF.03 exams with a 93% score and received my professional qualification certificate
+    .at-03-2026 = I successfully completed the INF.04 qualification with a 95% score, earning another certificate
+    .at-04-2026 = I was awarded the title of Programmer Technician with a distinction for academic excellence and professional conduct
 on-the-web = On the web
 
 certificates =

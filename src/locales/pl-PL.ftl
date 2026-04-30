@@ -28,11 +28,12 @@ what-i-love = Co uwielbiam
     samochody marki Mercedes-Benz i konsole do gier z przełomu lat 2000
 
 biography = Biografia
-    .at-2006 = Urodziłem się w Stalowej Woli, Polska
-    .at-2020 = Zacząłem naukę w technikum nr. 4 w Stalowej Woli na profilu technik programista
-    .at-2024 = Odbyłem dwutygodniowe praktyki w Maladze, ucząc się przy tym technologii ASP.NET podczas prac nad projektem z końcową oceną 6, potwierdzone certyfikatem
-    .at-2025 = Zdanie egzaminów zawodowych klasyfikacji INF 03 z wynikiem 93%, potwierdzone certyfikatem kwalifikacji zawodowej
-    .at-2026 = Uzyskanie certyfikatu kwalifikacji zawodowej w zakresie INF.04 z wynikiem ogólnym 95%.
+    .at-2006 = Urodziłem się w Stalowej Woli
+    .at-2020 = Rozpocząłem naukę w Technikum nr 4 w Stalowej Woli na profilu technik programista
+    .at-2024 = Odbyłem dwutygodniowe praktyki w Maladze (ASP.NET), kończąc projekt z oceną celującą
+    .at-2025 = Zdałem egzamin INF.03 z wynikiem 93% i uzyskałem certyfikat kwalifikacji zawodowej
+    .at-03-2026 = Pomyślnie ukończyłem kwalifikację INF.04 z wynikiem 95%, zdobywając kolejny certyfikat
+    .at-04-2026 = Otrzymałem tytuł technika programisty oraz wyróżnienie za wyniki w nauce i wzorową postawę zawodową
 
 on-the-web = W sieci
 
