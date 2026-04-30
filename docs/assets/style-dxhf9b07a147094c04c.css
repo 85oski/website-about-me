@@ -1,0 +1,1 @@
+section.tech-stack ul{flex-flow:wrap;gap:.5rem;padding:0;list-style:none;display:flex}section.tech-stack ul li{background-color:var(--surface-container-high);border-radius:.4rem;padding:0 1rem}@media (hover:hover){section.tech-stack ul li{transition:var(--transition)}section.tech-stack ul li:hover{background-color:var(--surface-container-highest);transform:translateY(-.25rem)}}
